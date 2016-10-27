@@ -70,7 +70,8 @@ export default class App extends Component {
     filteredTransactions: [],
     filterCardType: 'All types',
     filterPaymentStatus: 'All transactions',
-    filterReferenceNumberOrEmail: '',
+    filterReference: '',
+    email: '',
     filterMinDate: moment(),
     filterMaxDate: moment(),
     filterFromDate: moment(),
@@ -91,7 +92,8 @@ export default class App extends Component {
     this.handleApplyFilters = this.handleApplyFilters.bind(this)
     this.handleCardTypeChange = this.handleCardTypeChange.bind(this)
     this.handlePaymentStatusChange = this.handlePaymentStatusChange.bind(this)
-    this.handleReferenceNumberOrEmailChange = this.handleReferenceNumberOrEmailChange.bind(this)
+    this.handleReferenceNumberChange = this.handleReferenceNumberChange.bind(this)
+    this.handleEmailChange = this.handleEmailChange.bind(this)
     this.handleGoogleSheetsApiReady = this.handleGoogleSheetsApiReady.bind(this)
     this.handleResetFilters = this.handleResetFilters.bind(this)
     this.handleFromDateChange = this.handleFromDateChange.bind(this)
@@ -166,8 +168,13 @@ export default class App extends Component {
     this.setState({ filterPaymentStatus: evt.target.value })
   }
 
-  handleReferenceNumberOrEmailChange (value) {
-    this.setState({ filterReferenceNumberOrEmail: value })
+  handleReferenceNumberChange (value) {
+    this.setState({ filterReference: value })
+  }
+
+  handleEmailChange (value) {
+    console.log(value);
+    this.setState({ email: value })
   }
 
   handleFromDateChange (m) {
@@ -202,11 +209,19 @@ export default class App extends Component {
       return tr.status === this.state.filterPaymentStatus
     }
 
-    const filterByReferenceNumberOrEmail = (tr) => {
-      const referenceNumberOrEmail = this.state.filterReferenceNumberOrEmail.trim().toLowerCase()
-      if (!referenceNumberOrEmail) { return true }
-      const data = (tr.reference + tr.email).toLowerCase()
-      const hasPartialMatch = data.indexOf(referenceNumberOrEmail) !== -1
+    const filterByReferenceNumber = (tr) => {
+      const referenceNumber = this.state.filterReference.trim().toLowerCase()
+      if (!referenceNumber) { return true }
+      const data = (tr.reference).toLowerCase()
+      const hasPartialMatch = data.indexOf(referenceNumber) !== -1
+      return hasPartialMatch
+    }
+
+    const filterByEmail = (tr) => {
+      const email = this.state.email.trim().toLowerCase()
+      if (!email) { return true }
+      const data = (tr.email).toLowerCase()
+      const hasPartialMatch = data.indexOf(email) !== -1
       return hasPartialMatch
     }
 
@@ -220,7 +235,8 @@ export default class App extends Component {
     const filteredTransactions = this.state.transactions
       .filter(filterCardType)
       .filter(filterPaymentStatus)
-      .filter(filterByReferenceNumberOrEmail)
+      .filter(filterByReferenceNumber)
+      .filter(filterByEmail)
       .filter(filterByDate)
 
     this.setState({
@@ -236,7 +252,7 @@ export default class App extends Component {
       filteredTransactions: [],
       filterCardType: 'All types',
       filterPaymentStatus: 'All transactions',
-      filterReferenceNumberOrEmail: '',
+      filterReference: '',
       filterFromDate: moment(),
       filterFromTime: '00:00:00',
       filterToDate: moment(),
@@ -265,9 +281,11 @@ export default class App extends Component {
           <TransactionFilters
             applyFilter={applyFilter}
             handleFilterButtonClick={this.handleApplyFilters}
+            handleEmailButtonClick={this.handleApplyFilters}
             handleCardTypeChange={this.handleCardTypeChange}
             handlePaymentStatusChange={this.handlePaymentStatusChange}
-            handleReferenceNumberOrEmailChange={this.handleReferenceNumberOrEmailChange}
+            handleReferenceNumberChange={this.handleReferenceNumberChange}
+            handleEmailChange={this.handleEmailChange}
             handleFromDateChange={this.handleFromDateChange}
             handleFromTimeChange={this.handleFromTimeChange}
             handleToDateChange={this.handleToDateChange}
@@ -281,7 +299,9 @@ export default class App extends Component {
             toDate={this.state.filterToDate}
             toTime={this.state.filterToTime}
             paymentStatus={this.state.filterPaymentStatus}
-            referenceNumberOrEmail={this.state.filterReferenceNumberOrEmail}
+            referenceNumber={this.state.filterReference}
+            email={this.state.email}
+
           />
           <TransactionCategories
             transactions={transactions}
