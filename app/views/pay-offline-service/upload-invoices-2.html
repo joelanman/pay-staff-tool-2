@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Transaction list
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+	<div class="grid-row">
+		{% include "includes/utility-navigation.html" %}
+	</div>
+
+	<div class="grid-row">
+		<div class="column-quarter">
+
+			{% include "includes/left-navigation-2.html" %}
+		</div>
+
+		<div class="column-three-quarters">
+			<div class="grid-row padding-grid-row">
+				<h1 class="heading-large underline">Upload invoices</h1>
+			</div>
+		</div>	
+	</div>
+</main>
+{% endblock %}
