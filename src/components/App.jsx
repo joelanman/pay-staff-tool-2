@@ -173,7 +173,6 @@ export default class App extends Component {
   }
 
   handleEmailChange (value) {
-    console.log(value);
     this.setState({ email: value })
   }
 
