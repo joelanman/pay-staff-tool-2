@@ -70,6 +70,22 @@ export default class TransactionDetail extends Component {
         <h2 className='trans-evs-heading heading-medium'>Transaction events</h2>
         <table>
           <tbody>
+            {(!isNaN(refundSucceed)
+              ? <tr>
+                <td>Full refund successful</td>
+                <td>–£{amount}.00</td>
+                <td><FormattedTime time={refundSuccess} /></td>
+              </tr>
+              : null
+            }
+            {(!isNaN(refundSubmit))
+              ? <tr>
+                <td>Full refund initiated</td>
+                <td>–£{amount}.00</td>
+                <td><FormattedTime time={refundSubmit} /></td>
+              </tr>
+              : null
+            }
             {(!isNaN(failed))
               ? <tr>
                 <td>{failReason}</td>

@@ -35,6 +35,8 @@ function rowToTransaction (row) {
     paySucceed: new Date(parseSpreadsheetDate(row[16])),
     failed: new Date(parseSpreadsheetDate(row[17])),
     failReason: row[18]
+    refundSubmit: new Date(parseSpreadsheetDate(row[19])),
+    refundSucceed: new Date(parseSpreadsheetDate(row[20])),
   }
 }
 
