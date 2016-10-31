@@ -199,8 +199,8 @@ export default class App extends Component {
     }
 
     const filterPaymentStatus = (tr) => {
-      if (this.state.filterPaymentStatus === 'Refunds') {
-        return tr.status === 'Refund'
+      if (this.state.filterPaymentStatus === 'Refunded') {
+        return tr.status === 'Refunded'
       }
       if (this.state.filterPaymentStatus === 'All transactions') {
         return true
