@@ -10,9 +10,11 @@ export default class TransactionFilters extends Component {
   static propTypes = {
     applyFilter: PropTypes.bool.isRequired,
     handleFilterButtonClick: PropTypes.func.isRequired,
+    handleEmailButtonClick: PropTypes.func.isRequired,
     handleCardTypeChange: PropTypes.func.isRequired,
     handlePaymentStatusChange: PropTypes.func.isRequired,
-    handleReferenceNumberOrEmailChange: PropTypes.func.isRequired,
+    handleReferenceNumberChange: PropTypes.func.isRequired,
+    handleEmailChange: PropTypes.func.isRequired,
     cardType: PropTypes.oneOf([
       'All types',
       'Visa',
@@ -40,13 +42,15 @@ export default class TransactionFilters extends Component {
     handleFromTimeChange: PropTypes.func.isRequired,
     handleToDateChange: PropTypes.func.isRequired,
     handleToTimeChange: PropTypes.func.isRequired,
-    referenceNumberOrEmail: PropTypes.string.isRequired,
+    referenceNumber: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
     handleResetFilters: PropTypes.func.isRequired
   }
 
   render () {
     const {
-      referenceNumberOrEmail, handleReferenceNumberOrEmailChange, handleFilterButtonClick,
+      referenceNumber, handleReferenceNumberChange, handleFilterButtonClick,
+      email, handleEmailChange, handleEmailButtonClick,
       handleCardTypeChange, handlePaymentStatusChange, cardType, paymentStatus,
       fromDate, fromTime, toDate, toTime,
       handleFromDateChange, handleFromTimeChange, handleToDateChange, handleToTimeChange,
@@ -58,21 +62,35 @@ export default class TransactionFilters extends Component {
         <h2 className='heading-medium staff-subheading'>Filter transactions list</h2>
       </div>
       <div className='filter-section'>
-        <div className='column-third filter-fields'>
+        <div className='column-quarter filter-fields'>
           <div className='form-group'>
-            <label className='form-label-bold' htmlFor='ref-or-email'>
-              Reference number or email
+            <label className='form-label-bold' htmlFor='ref'>
+              Reference number
               <span className='form-hint'>Enter full or partial details</span>
             </label>
             <InputText
               id='ref-or-email'
-              onChange={handleReferenceNumberOrEmailChange}
+              onChange={handleReferenceNumberChange}
               onSubmit={handleFilterButtonClick}
-              value={referenceNumberOrEmail}
+              value={referenceNumber}
             />
           </div>
         </div>
-        <div className='column-third filter-fields'>
+        <div className='column-quarter filter-fields'>
+          <div className='form-group'>
+            <label className='form-label-bold' htmlFor='email'>
+              email
+              <span className='form-hint'>Enter full or partial details</span>
+            </label>
+            <InputText
+              id='ref-or-email'
+              onChange={handleEmailChange}
+              onSubmit={handleEmailButtonClick}
+              value={email}
+            />
+          </div>
+        </div>
+        <div className='column-quarter filter-fields'>
           <div className='form-group'>
             <label className='form-label-bold' htmlFor='payment-status'>
               Payment status
@@ -94,7 +112,8 @@ export default class TransactionFilters extends Component {
             </div>
           </div>
         </div>
-        <div className='column-third filter-fields'>
+
+        <div className='column-quarter filter-fields'>
           <div className='form-group'>
             <label className='form-label-bold' htmlFor='card-type'>
               Card type
@@ -112,7 +131,7 @@ export default class TransactionFilters extends Component {
                 <option value='Mastercard'>Mastercard</option>
                 <option value='American Express'>American Express</option>
                 <option value='JCB'>JCB</option>
-                <option value="Diner's Club">Diner's Club</option>
+                <option value="Diner's Club">Diners Club</option>
                 <option value='Discover'>Discover</option>
                 <option value='Union Pay'>Union Pay</option>
               </select>
