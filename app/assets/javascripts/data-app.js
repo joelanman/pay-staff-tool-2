@@ -38,7 +38,9 @@
       "authSucceed": formatDate(new Date ( Date.parse(row[14]) ) ),
       "paySubmit": formatDate(new Date ( Date.parse(row[15]) ) ),
       "paySucceed": formatDate(new Date ( Date.parse(row[16]) ) ),
-      "failed": formatDate(new Date ( Date.parse(row[17]) ) )
+      "failed": formatDate(new Date ( Date.parse(row[17]) ) ),
+      "refundSubmit": formatDate(new Date ( Date.parse(row[19]) ) ),
+      "refundSucceed": formatDate(new Date ( Date.parse(row[20]) ) )
     };
     return obj;
   }
