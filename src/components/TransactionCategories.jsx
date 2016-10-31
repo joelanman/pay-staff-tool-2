@@ -9,7 +9,7 @@ export default class TransactionCategories extends Component {
     var txFailed = transactions.filter(function(tx){return tx.status==='Failed'})
     var txFailedAmount = txFailed.reduce(function(acc, tr){return acc + parseInt(tr.amount, 10)}, 0)
 
-    var txRefunds = transactions.filter(function(tx){return tx.status==='Refunds'})
+    var txRefunds = transactions.filter(function(tx){return tx.status==='Refunded'})
     var txRefundsAmount = txRefunds.reduce(function(acc, tr){return acc + parseInt(tr.amount, 10)}, 0)
 
     var netIncomeAmount = txSuccessfulAmount - txRefundsAmount

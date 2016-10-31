@@ -30,7 +30,7 @@ export default class TransactionFilters extends Component {
       'In progress',
       'Successful',
       'Failed',
-      'Refunds'
+      'Refunded'
     ]).isRequired,
     minDate: PropTypes.instanceOf(moment).isRequired,
     maxDate: PropTypes.instanceOf(moment).isRequired,
@@ -107,7 +107,7 @@ export default class TransactionFilters extends Component {
                 <option value='In progress'>In progress</option>
                 <option value='Successful'>Successful</option>
                 <option value='Failed'>Failed</option>
-                <option value='Refunds'>Refunds</option>
+                <option value='Refunded'>Refunded</option>
               </select>
             </div>
           </div>
