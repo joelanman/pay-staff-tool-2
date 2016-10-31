@@ -14,7 +14,12 @@ export default class TransactionRow extends Component {
   }
 
   render () {
-    const {reference, email, amount, card, status, subStatus, startDate} = this.props.transaction
+    const {reference, email, amount, card, status, subStatus, startDate, refundSucceed, refundMessage} = this.props.transaction
+
+    let date = startDate
+    if (status === 'Refunded') {
+      date = refundSucceed
+    }
 
     return <tr
       onClick={this.props.handleClick}
@@ -30,8 +35,12 @@ export default class TransactionRow extends Component {
           ? <span className='error-code'>{ subStatus }</span>
           : null
         }
+        {(status === 'Refunded')
+          ? <span className='refund-label'>{ refundMessage }</span>
+          : null
+        }
       </td>
-      <td><FormattedTime time={startDate} /></td>
+      <td><FormattedTime time={date} /></td>
     </tr>
   }
 }

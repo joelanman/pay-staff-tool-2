@@ -12,7 +12,14 @@ export default class TransactionDetail extends Component {
     const {handleBackClick, transaction} = this.props
     const {reference, email, amount, status, card, startDate, payId,
       authSucceed, authSubmit, startEnter, paySubmit, paySucceed,
-      failed, failReason, provider, gatewayId, subStatus} = transaction
+      failed, failReason, provider, gatewayId, subStatus,
+      refundSubmit, refundSucceed, refundMessage, refundAmount} = transaction
+
+    var statusMessage = status
+    if (status === 'Refunded' && refundMessage) {
+      var words = refundMessage.split(' ')
+      statusMessage = words[0] + ' ' + words[1]
+    }
 
     return <div>
       <div className='overview'>
@@ -41,7 +48,13 @@ export default class TransactionDetail extends Component {
               </tr>
               <tr>
                 <td>Status:</td>
-                <td>{status} {(subStatus) ? `(${subStatus})` : ''}</td>
+                <td>
+                  {statusMessage} {(subStatus) ? `(${subStatus})` : ''}<br />
+                  {(status === 'Refunded')
+                    ? <span className='refund-label'>{refundMessage} on <FormattedTime time={refundSucceed} /></span>
+                    : null
+                  }
+                </td>
               </tr>
               <tr>
                 <td>Type:</td>
@@ -70,18 +83,18 @@ export default class TransactionDetail extends Component {
         <h2 className='trans-evs-heading heading-medium'>Transaction events</h2>
         <table>
           <tbody>
-            {(!isNaN(refundSucceed)
+            {(!isNaN(refundSucceed))
               ? <tr>
-                <td>Full refund successful</td>
-                <td>–£{amount}.00</td>
-                <td><FormattedTime time={refundSuccess} /></td>
+                <td>Refund successful</td>
+                <td>–£{refundAmount}.00</td>
+                <td><FormattedTime time={refundSucceed} /></td>
               </tr>
               : null
             }
             {(!isNaN(refundSubmit))
               ? <tr>
-                <td>Full refund initiated</td>
-                <td>–£{amount}.00</td>
+                <td>Refund initiated</td>
+                <td>–£{refundAmount}.00</td>
                 <td><FormattedTime time={refundSubmit} /></td>
               </tr>
               : null

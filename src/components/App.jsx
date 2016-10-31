@@ -14,6 +14,20 @@ function parseSpreadsheetDate (d) {
   return `${MM}/${dd}/${yyyy} ${hh}:${mm}:${ss}`
 }
 
+function getKeyDates (transactions) {
+  let keyDates = transactions.reduce((kd, curr) => {
+    if (curr.startDate < kd.min) { kd.min = curr.startDate }
+    if (curr.startDate > kd.max) { kd.max = curr.startDate }
+    return kd
+  }, {
+    min: transactions[0].startDate,
+    max: transactions[0].startDate
+  })
+  keyDates.min = moment(keyDates.min)
+  keyDates.max = moment(keyDates.max)
+  return keyDates
+}
+
 function rowToTransaction (row) {
   return {
     reference: row[0],
@@ -34,9 +48,11 @@ function rowToTransaction (row) {
     paySubmit: new Date(parseSpreadsheetDate(row[15])),
     paySucceed: new Date(parseSpreadsheetDate(row[16])),
     failed: new Date(parseSpreadsheetDate(row[17])),
-    failReason: row[18]
+    failReason: row[18],
     refundSubmit: new Date(parseSpreadsheetDate(row[19])),
     refundSucceed: new Date(parseSpreadsheetDate(row[20])),
+    refundAmount: row[21],
+    refundMessage: row[22]
   }
 }
 
@@ -116,19 +132,11 @@ export default class App extends Component {
     this.setState({ loading: true })
     this.state.gapi.client.sheets.spreadsheets.values.get({
       spreadsheetId: SPREADSHEET_ID,
-      range: 'Dataset0.1!A' + 2 + ':S' + 500
+      range: 'Dataset0.1!A' + 2 + ':' + 500
     }).then((response) => {
       const transactions = response.result.values.map(rowToTransaction)
-      let keyDates = transactions.reduce((kd, curr) => {
-        if (curr.startDate < kd.min) { kd.min = curr.startDate }
-        if (curr.startDate > kd.max) { kd.max = curr.startDate }
-        return kd
-      }, {
-        min: transactions[0].startDate,
-        max: transactions[0].startDate
-      })
-      keyDates.min = moment(keyDates.min)
-      keyDates.max = moment(keyDates.max)
+      const keyDates = getKeyDates(transactions)
+
       this.setState({
         loading: false,
         transactions,
@@ -229,7 +237,11 @@ export default class App extends Component {
     const filterByDate = (tr) => {
       const fromDate = getFromDate(this.state.filterFromDate.format('DD/MM/YYYY'), this.state.filterFromTime)
       const toDate = getToDate(this.state.filterToDate.format('DD/MM/YYYY'), this.state.filterToTime)
-      const isBetween = isBetweenDates(tr.startDate, fromDate, toDate)
+      var filterByDate = tr.startDate
+      if (tr.status === 'Refunded') {
+        filterByDate = tr.refundSucceed
+      }
+      const isBetween = isBetweenDates(filterByDate, fromDate, toDate)
       return isBetween
     }
 
@@ -247,6 +259,7 @@ export default class App extends Component {
   }
 
   handleResetFilters (evt) {
+    const keyDates = getKeyDates(this.state.transactions)
     evt.preventDefault()
     this.setState({
       applyFilter: false,
@@ -254,10 +267,10 @@ export default class App extends Component {
       filterCardType: 'All types',
       filterPaymentStatus: 'All transactions',
       filterReference: '',
-      filterFromDate: moment(),
       filterFromTime: '00:00:00',
-      filterToDate: moment(),
-      filterToTime: '23:59:59'
+      filterToTime: '23:59:59',
+      filterFromDate: keyDates.min,
+      filterToDate: keyDates.max
     })
   }
 
