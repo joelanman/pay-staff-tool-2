@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Pay for a British Embassy service</h1>
+
+      <p>Once you pay, you'll be given a reference number that you can use in your transaction.</p>
+
+      <h2 class="heading-medium">Payment summary</h2>
+
+      <table>
+      	<tbody>
+      		<tr>
+      			<td>Payment of:</td>
+      			<td class="heading-small">Legalise a signature or seal</td>
+    			</tr>
+    			<tr>
+    				<td>Amount to pay:</td>
+    				<td class="heading-large">£30</td>
+  				</tr>
+				</tbody>
+      </table>
+    
+      <a href="/pay-offline-service/embassy-fees/ref-confirm" class="button">Make payment</a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
