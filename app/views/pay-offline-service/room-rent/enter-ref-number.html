@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Rent a government venue</h1>
+
+      <h2 class="heading-medium">Enter your reference number</h2>
+      <p>You should have received this number when using the service.</p>
+
+	<form action="/pay-offline-service/room-rent/ref-confirm" method="GET" class="form">
+        <div class="form-group">
+	        <label for="ref-number" class="form-label-bold">Reference number
+		        <span class="form-hint">For example, QQ 12 34 56C.</span>
+	        </label>
+	        <input type="text" class="form-control" id="ref-number" name="ref-number">
+        </div>
+        <div class="form-group">
+	        <button class="button">Continue</button>
+        </div>
+    </form>
+
+	<p>If you do not have a reference number, you'll need to contact the service on +44 7700 900468</p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

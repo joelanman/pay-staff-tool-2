@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/pay-offline-service/embassy-fees/choose-org">Back</a>
+
+      <h1 class="heading-large">
+        Which service are you paying for?
+      </h1>
+
+      <form>
+        <div class="form-group">
+        <fieldset>
+
+          <legend class="visuallyhidden">
+            Which service are you paying for?
+          </legend>
+
+          <label class="block-label" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="radio-inline-group">
+            Legalising a signature or seal - £30
+          </label>
+          <label class="block-label" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="radio-inline-group">
+            Preparing any certificate, declaration or document in English, or in another language - £50
+          </label>
+          <label class="block-label" for="radio-inline-3">
+            <input id="radio-inline-3" type="radio" name="radio-inline-group">
+            Declaration of existence (except if required by British Government) - £25
+          </label>
+          <label class="block-label" for="radio-inline-4">
+            <input id="radio-inline-4" type="radio" name="radio-inline-group">
+            Administering an oath, marking of exhibits, declaration or affirmation - £50
+          </label>
+          <label class="block-label" for="radio-inline-5">
+            <input id="radio-inline-5" type="radio" name="radio-inline-group">
+            Witnessing a signature - £25
+          </label>
+          <label class="block-label" for="radio-inline-6">
+            <input id="radio-inline-6" type="radio" name="radio-inline-group">
+            Certifying a copy of a document - £30
+          </label>
+          <label class="block-label" for="radio-inline-7">
+            <input id="radio-inline-7" type="radio" name="radio-inline-group">
+            Uniting documents - £25
+          </label>
+          <label class="block-label" for="radio-inline-8">
+            <input id="radio-inline-8" type="radio" name="radio-inline-group">
+            Administering an oath of British Citizenship under the British Nationality Act 1981 - £100
+          </label>
+        
+        </fieldset>
+    </div>
+  </form>
+
+
+      <a class="button" href="/pay-offline-service/embassy-fees/confirm.html">Next</a>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
