@@ -405,7 +405,7 @@ table {
 
 .heading-large {
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 5px;
 }
 
 .section-number {
@@ -1038,3 +1038,80 @@ body {
 	font-weight: 700;
 }
 
+
+// Tabs on API Key pages
+
+ul.tabs {
+  padding: 0px;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+}
+
+.tabs a, .tabs a:visited, .tabs a:hover, .tabs a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul.tabs li {
+  margin-left: 10px;
+  font-weight: bold;
+  padding: 10px 40px;
+  background: none;
+  color: #005ea5;
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+
+ul.tabs li.current {
+  color: black;
+  border: 1px solid #ccc;
+  border-bottom: hidden;
+  background-color: white;
+}
+
+.tab-content {
+  display: none;
+  // padding-top: 30px;
+}
+
+.tab-content.current {
+  display: inherit;
+}
+
+// Key list on API Key pages
+
+.key-list {
+  margin-top: 30px;
+  list-style: none;
+  border-top: 1px solid #bfc1c3;
+  max-width: 700px;
+}
+
+.key-list-item {
+  border-bottom: 1px solid #bfc1c3;
+  padding: 0 0 20px 0;
+}
+
+.push-bottom-sml {
+  margin-bottom: 15px;
+}
+
+.push-left {
+	margin-left: 30px;
+}
+
+// Generate API key description box
+
+textarea {
+  resize: none;
+  width: 100%;
+  max-width: 600px;
+  min-height: 100px;
+  margin-bottom: 30px;
+}
+
+.add-top-margin {
+    margin-top: 10px !important;
+}
