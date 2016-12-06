@@ -19,38 +19,33 @@
 		{% include "includes/left-navigation.html" %}		
 	</div>
 
-<!-- Invite confirmation box -->
 
-	<div class="column-one-half">
+<div class="column-three-quarters">
+		
+		<!-- Invite confirmation box -->
 		<div class="govuk-box-highlight">
 			<p>Invite sent to paul.murphy@digital.ministry.gov.uk</p>
 		</div>
-	</div>
-
-	<div class="column-three-quarters">
-
-
-<!-- Invite button -->
-
-	    <h1 class="heading-large underline">Team Members</h1>
+	    <h1 class="heading-large underline">Team members</h1>
 	      	<div class="overview">
 	      		<div class="column-one-half team-active">
 		      		<h2 class="heading-medium staff-subheading">
 	    				Active (7)
 	  				</h2>
   				</div>
-  				<div class="column-one-half invite-button">
-	  				<a href="/invite-team-members">
-		  				<input class="button" type="submit" value="Invite a team member">
+  			</div>
+
+  	<!-- Invite button -->			
+  					<a href="/invite-team-members">
+	  					<input class="button invite-button" type="submit" value="Invite a team member">
 	  				</a>
-  				</div>
-			</div>
+
+	<!-- Team members list -->
 
 
-		<div class="column-three-quarters filter-fields">
+		<div class="column-full filter-fields">
 				
 		    <table>
-		    	
 		      	<tbody>
 		      		<tr>
 		      			<td class="permissions-type">Administrators (2)</td>
@@ -62,9 +57,10 @@
 			      		<td>Lois Gonzalez</td>
 			      	</tr>
 				</tbody>
-				<tbody>
 			</table>
-			<table>	
+			
+			<table>
+				<tbody>	
 		      		<tr>
 		      			<td class="permissions-type">View and refund (3)</td>
 		      		</tr>
@@ -91,21 +87,22 @@
 			      		<td>Oscar Smith</td>
 			      	</tr>
 				</tbody>
-			</table>		
+			</table>
+
 		</div>
 
 		<div class="overview">
-      		<div class="column-one-half team-active">
+      		<div class="column-full team-active">
 	      		<br/>
 	      		<h2 class="heading-medium staff-subheading">
 					Invited (1)
   				</h2>
 			</div>
 		</div>
-		<div class="column-three-quarters filter-fields">
+
+		<div class="column-full filter-fields">
 	
-		    <table>
-		    	
+		    <table>	
 		      	<tbody>
 		      		<tr>
 		      			<td class="permissions-type">View and refund (1)</td>
@@ -116,10 +113,12 @@
 			      		<td><a href="team-members">Cancel invitation</a></td>
 			      	</tr>
 				</tbody>
-				<tbody>
 			</table>
-	</div>
+		</div>
 </div>
+</div>
+
+
 </main>
 
 {% endblock %}
