@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Transaction list
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+	
+<div class="grid-row">
+
+	<!-- Main body -->
+
+	<div class="column-three-quarters">
+	    <h1 class="heading-large underline">Switch service</h1>
+	    	<h2 class="heading-medium staff-subheading-2">
+	    		4 Services available
+	  		</h2>
+
+  					<a href="#">
+	  					<input class="button add-service-button" type="submit" value="Add a new service">
+	  				</a>
+
+	<!-- Team members list -->
+		<div class="column-full filter-fields">
+				
+		    <table>	    	
+		      	<tbody>
+		      		<tr>
+			      		<td></td>
+			      		<td></td>
+			      	</tr>
+			      	<tr class='clickable-row' data-href='team-member-detail'>
+			      		<td><a href="">Lasting Power of Attorney</a></td>
+			      		<td>Live account</td>
+			      	</tr>
+			      	<tr class='clickable-row' data-href='#'>
+			      		<td><a href="">Lasting Power of Attorney</a></td>
+			      		<td>Trial account</td>
+			      	</tr>
+			      	<tr class='clickable-row' data-href='#'>
+			      		<td><a href="">Lasting Power of Attorney</a></td>
+			      		<td>Worldpay test</td>
+			      	</tr>
+			      	<tr class='clickable-row' data-href='#'>
+			      		<td><a href="">Lasting Power of Attorney</a></td>
+			      		<td>Barclays Smartpay test</td>
+			      	</tr>
+				</tbody>
+			</table>
+		</div>
+	
+	</div>
+
+</div>
+</main>
+
+{% endblock %}

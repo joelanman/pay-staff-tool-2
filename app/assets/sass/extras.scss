@@ -67,6 +67,11 @@
 	margin-bottom: 30px;
 }
 
+.staff-subheading-2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
 .utility-nav {
 	border-bottom: 1px solid #BFC1C3;
 	margin-left: 15px;
@@ -207,6 +212,7 @@ tr.clickable-row:hover {
 
 .filter-fields {
 	padding-left: 0;
+	padding-right: 0;
 }
 
 .datetime-seperator {
@@ -1017,10 +1023,15 @@ body {
 .team-active {
 	padding-left: 0;
 }
+
 .invite-button {
 	margin-top: 10px;
 	float: right;
+}
 
+.add-service-button {
+	margin-top: -60px;
+	float: right;
 }
 
 .radio-2 {
