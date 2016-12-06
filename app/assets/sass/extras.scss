@@ -64,7 +64,7 @@
 
 .staff-subheading {
 	margin-top: 15px;
-	margin-bottom: 5px;
+	margin-bottom: 30px;
 }
 
 .utility-nav {
@@ -83,6 +83,7 @@
 .utility-nav li {
 	display: inline;
 	margin-right: -10px;
+	margin-left: 30px;
 	font-size: 16px;
 }
 .utility-nav li:nth-child(2) {
@@ -392,15 +393,21 @@ table {
 }
 
 .back {
-	margin-top: 30px;
+	margin-top: 15px;
+	margin-bottom: 30px;
 }
 
 .back a {
 	color: #005EA5;
 	margin-top: 100px;
 	font-size: 16px;
-	font-weight: 700;
+	font-weight: 400;
 	text-decoration: none;
+}
+
+.member-email {
+	margin-top: -15px;
+	margin-bottom: 30px
 }
 
 .heading-large {
@@ -1012,6 +1019,7 @@ body {
 }
 .invite-button {
 	margin-top: 10px;
+	float: right;
 
 }
 
