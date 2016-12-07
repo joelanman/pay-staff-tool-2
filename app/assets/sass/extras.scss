@@ -58,8 +58,10 @@
 	@include grid-column( 3/4 );
 }
 
+
 .underline {
-	border-bottom: 5px solid #0B0C0C;
+	// border-bottom: 5px solid #0B0C0C;
+	margin-bottom: 30px!important;
 }
 
 .staff-subheading {
@@ -114,14 +116,18 @@
 }
 
 .left-nav li {
-	border-bottom: 1px solid #BFC1C3;
-	padding-bottom: 8px;
-	padding-top: 12px;
+	padding-bottom: 5px;
+	padding-top: 5px;
 	text-decoration: none;
 }
 
 .left-nav li a {
 	text-decoration: none;
+}
+
+.active-left-nav {
+	font-weight: 700;
+	color: black;
 }
 
 .intro-block-blue {

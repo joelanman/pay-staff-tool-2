@@ -13,29 +13,23 @@
 	
 	<div class="grid-row">
 <!-- Left nav -->
-		<div class="column-quarter">
+		<div class="column-one-third">
 
 
 
-		{% include "includes/left-navigation.html" %}		
+		{% include "includes/left-navigation-team.html" %}		
 		</div>
 
-	    <div class="column-three-quarters">
+	    <div class="column-two-thirds">
 
 <!-- Main body -->
-	      <h1 class="heading-large underline">Team Members</h1>
-	      	<div class="overview">
+	      <h1 class="heading-large underline">Team members</h1>
+	      	
 	      	<div class="back">
 				<a href="/team-members">&#9664; Back to all members</a>
 			</div>
-	      		<h2 class="heading-medium staff-subheading">
-    				John Smith
-  				</h2>
-  				<p class="member-email">
-  				john.smith@email.gov.uk
-  				</p>
-		</div>
-		    <h2 class="heading-small">Member details</h2>
+		
+		    <h2 class="heading-small">Details</h2>
 				
 		    <table class="member-table">
 		      	<tbody>
@@ -43,6 +37,16 @@
 			      		<td></td> 
 			      		<td></td>
 			      		<td></td>
+			      	</tr>
+			      	<tr>
+			      		<td>Name:</td> 
+			      		<td>John Smith</td>
+			      		<td><a href="/edit-permissions">Change</a></td>
+			      	</tr>
+			      	<tr>
+			      		<td>Email:</td> 
+			      		<td>john.smith@email.gov.uk</td>
+			      		<td><a href="/edit-permissions">Change</a></td>
 			      	</tr>
 			      	<tr>
 			      		<td>Permission level:</td> 
