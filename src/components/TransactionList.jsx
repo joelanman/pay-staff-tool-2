@@ -15,7 +15,7 @@ export default class TransactionList extends Component {
     const noTransactions = transactions.length === 0
 
     return <div>
-      <div className='column-three-quarters filter-fields'>
+      <div className='filter-fields'>
         <h2 className='heading-small'>
           <DownloadTransactionsCsv
             transactions={transactions}

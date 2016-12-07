@@ -9,7 +9,7 @@
 <main id="content" role="main">
 
 <div class="grid-row">
-		{% include "includes/utility-navigation.html" %}
+		{% include "includes/utility-navigation-dashboard.html" %}
 </div>
 
 	<div class="grid-row">
@@ -28,19 +28,19 @@
 
 		      <h1 class="heading-large underline">Dashboard</h1>
 		      	<div class="overview">
-		      		<h2 class="heading-small staff-subheading">
+		      		<h2 class="heading-small period-dropdown-label">
 	    				Transactions overview:
 	  				</h2>
-	  				<div class="column-quarter filter-fields">
+	  				<div class="filter-fields">
 				 	<div class="form-group">
-					  	<div class="dropdown">
+					  	<div class="transactions-period-dropdown">
 						  	<select name="select" class="form-control dropdown-list" id="full-name">
-						  		<option value="value1" selected>All</option>
+						  		<option value="value1">All transactions</option>
 							  	<option value="value1">Today</option> 
-								<option value="value2">7 days</option>
-								<option value="value3">30 days</option>
-								<option value="value4">6 months</option>
-								<option value="value5">12 months</option>
+								<option value="value2" selected>Last 7 days</option>
+								<option value="value3">Last 30 days</option>
+								<option value="value4">Last 6 months</option>
+								<option value="value5">Last 12 months</option>
 							</select>
 						</div>
 					</div>

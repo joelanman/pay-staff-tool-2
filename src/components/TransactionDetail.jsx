@@ -24,13 +24,13 @@ export default class TransactionDetail extends Component {
     return <div>
       <div className='overview'>
         <div className='back'>
-          <a href='#' onClick={handleBackClick}>◀ Back</a>
+          <a href='#' onClick={handleBackClick}>◀ Back to transaction list</a>
         </div>
         <h2 className='heading-medium staff-subheading'>
           Transaction detail
         </h2>
       </div>
-      <div className='column-three-quarters filter-fields'>
+      <div className='filter-fields'>
         <div id='detail-item'>
           <table>
             <tbody>

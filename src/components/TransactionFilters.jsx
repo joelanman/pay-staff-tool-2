@@ -59,7 +59,7 @@ export default class TransactionFilters extends Component {
 
     return <div>
       <div className='overview'>
-        <h2 className='heading-medium staff-subheading'>Filter transactions list</h2>
+        <h2 className='heading-small'>Filter transactions list</h2>
       </div>
       <div className='filter-section'>
         <div className='column-quarter filter-fields'>
