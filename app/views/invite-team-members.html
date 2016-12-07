@@ -14,13 +14,13 @@
 <div class="grid-row">
 
 	<!-- Left nav -->	
-	<div class="column-quarter">
-		{% include "includes/left-navigation.html" %}		
+	<div class="column-one-third">
+		{% include "includes/left-navigation-team.html" %}		
 	</div>
 
 	<!-- Main body -->
 
-	<div class="column-three-quarters">
+	<div class="column-two-thirds">
 	    <h1 class="heading-large underline">Team Members</h1>
       	<div class="overview">
       		<div class="column-one-half team-active">
@@ -29,9 +29,9 @@
   				</h2>
 				</div>
 		</div>
-	</div>
 	
-	<div class="column-one-half">
+	
+
 		<form action="email" class="form">
             <div class="form-group">
               <label class="form-label" for="full-name">Full name</label>
@@ -50,11 +50,10 @@
         </form>
 
         <!-- Permission level -->
-
-        <h3 class="heading-small">Permission level</h3>
         
         <form class="permission-main">
 			<div class="form-group">
+			<h3 class="heading-small">Permission level</h3>
 			    <fieldset>
 
 		      	<legend class="visuallyhidden">Permission level</legend>
@@ -95,11 +94,12 @@
 	          	<a href="/invite-confirmation">
             	<input class="button" type="submit" value="Send invitation email">
           		</a>  
-      		  </div>
+      	 
 		      <p>
 		        <a href="/team-members">Cancel</a>
 		      </p>
 		</div>
+	</div>
 
 </div>
 </main>
