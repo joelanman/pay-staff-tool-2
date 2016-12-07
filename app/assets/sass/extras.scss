@@ -31,11 +31,11 @@
 }
 
 #global-header-bar {
-	max-width: 1180px;
+	max-width: 960px;
 }
 
 #global-header .header-wrapper {
-	max-width: 1210px;
+	max-width: 990px;
 }
 
 .header-sign-out {
@@ -43,7 +43,7 @@
 }
 
 #content {
-	max-width: 1180px;
+	max-width: 960px;
 }
 
 .overview {
@@ -210,9 +210,11 @@ tr.clickable-row:hover {
 	overflow: hidden;
 }
 
-.filter-fields {
+.filter-fields-2 {
 	padding-left: 0;
 	padding-right: 0;
+	width: 220px;
+	margin-right: 10px;
 }
 
 .datetime-seperator {
