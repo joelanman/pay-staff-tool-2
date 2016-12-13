@@ -64,7 +64,7 @@
 	color: white;
 	font-size: 16px;
 	padding-left: 15px;
-	padding-right: 15px;
+	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
 	border-radius: 4px;
@@ -126,9 +126,17 @@
 	text-decoration: none;
 }
 
+.switch-service-link {
+	font-weight: 300;
+	font-size: 16px;
+	text-decoration: none;
+}
+
 .transactions-period-dropdown {
 	width: 200px;
 }
+
+
 
 
 
