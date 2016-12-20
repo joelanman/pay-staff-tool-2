@@ -70,6 +70,10 @@
 	border-radius: 4px;
 }
 
+.medium-underline {
+	border-bottom: 5px solid black;
+	padding-bottom: 10px;
+}
 
 .underline {
 	// border-bottom: 5px solid #0B0C0C;
@@ -1244,7 +1248,7 @@ textarea {
 }
 
 .graphs{ 
-	margin-top: 30px;
+	margin-top: 60px;
 }
 .link-back {
 	margin-bottom: 0px;
@@ -1252,6 +1256,11 @@ textarea {
 
 .table-overview {
 	margin: 40px 0 0 0px;
-	padding: 0px 0 0 40px;
+	font-weight: 700;
+	text-align: right;
+}
+
+.table-overview a {
+	text-decoration: none;
 }
 
