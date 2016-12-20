@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK payment page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="grid-row">
+		{% include "includes/utility-navigation-dashboard.html" %}
+</div>
+
+<div class="grid-row">
+	
+
+<!-- Main body -->
+ 
+	    <div class="column-full">
+		    <div class="grid-row padding-grid-row">
+			<a href="/staff-dashboard-graph" class="link-back">Back to dashboard</a>
+		    
+		    <h1 class="heading-large underline">Overview of previous weeks</h1>
+		      	
+			</div>
+		</div>
+		
+
+<!-- Graphs-->		
+	<div class="column full padding-grid-row">
+		<!-- <h2 class="heading-medium">Previous weeks &nbsp; &nbsp; 
+			<a href="staff-dashboard-graph" class="heading-small">Switch to graph view</a>
+		</h2> -->
+		<table>
+		  <thead>
+		    <tr>
+		      <th scope="col"></th>
+		      <th class="numeric" scope="col">Successful</th>
+		      <th class="numeric" scope="col">Failed</th>
+		      <th class="numeric" scope="col">Refund</th>
+		      <th class="numeric" scope="col">Total</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>19 December to today</td>
+		      <td class="numeric">£2,763</td>
+		      <td class="numeric">£1,792</td>
+		      <td class="numeric">£1,792</td>
+		      <td class="numeric">£1,792</td>
+		    </tr>
+		    <tr>
+		      <td>12 December to 18 December</td>
+		      <td class="numeric">£2,850</td>
+		      <td class="numeric">£1,740</td>
+		      <td class="numeric">£2,850</td>
+		      <td class="numeric">£1,740</td>
+		    </tr>
+		    <tr>
+		     <td>5 December to 11 December</td>
+		      <td class="numeric">£2,850</td>
+		      <td class="numeric">£1,740</td>
+		      <td class="numeric">£2,850</td>
+		      <td class="numeric">£1,740</td>
+		    </tr>
+		    <tr>
+		     <td>28 November to 4 December</td>
+		      <td class="numeric">2,388</td>
+		      <td class="numeric">1,683</td>
+		      <td class="numeric">2,388</td>
+		      <td class="numeric">1,683</td>
+		    </tr>
+		    <tr>
+		     <td>21 November to 27 November</td>
+		      <td class="numeric">2,388</td>
+		      <td class="numeric">1,683</td>
+		      <td class="numeric">2,388</td>
+		      <td class="numeric">1,683</td>
+		    </tr>
+		  </tbody>
+		</table>	
+		
+	</div>
+	
+	</div>
+</div>
+</div>
+</main>
+
+
+{%endblock%}
