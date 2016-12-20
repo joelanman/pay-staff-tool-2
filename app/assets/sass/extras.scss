@@ -931,14 +931,14 @@ h2.heading-paypoint {
 	max-width: 120px;
 }
 
-.transaction-categories {
+.transaction-categories .heading-medium{
+	margin-top: 20px;
 }
 
 .category {
 	display: inline-block;
 	width: 20%;
-	margin-top: 10px;
-	margin-left: 15px;
+	margin: 0 15px 0 0;
 }
 
 .category:first-child {
@@ -970,11 +970,13 @@ h2.heading-paypoint {
 }
 .category--net-income .category__amount {
 	background-color: black;
+
 }
 
 .arrow {
 	display: inline-block;
-	margin-left: 10px;
+	// margin-left: 10px;
+	margin-right: 15px;
 	margin-top: -7px;
 	// vertical-align: middle;
 }
@@ -1223,4 +1225,33 @@ textarea {
 
 .add-top-margin {
     margin-top: 10px !important;
+
 }
+
+// Staff dashboard 2 date filter
+
+
+.date-range .form-group {
+ margin: 0 14px 0 0;
+ 
+}
+.date-range .filter-button {
+	margin: 14px;
+}
+
+.filter-fields .heading-medium {
+	margin: 0px; 
+}
+
+.graphs{ 
+	margin-top: 30px;
+}
+.link-back {
+	margin-bottom: 0px;
+}
+
+.table-overview {
+	margin: 40px 0 0 0px;
+	padding: 0px 0 0 40px;
+}
+
