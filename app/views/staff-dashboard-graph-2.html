@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK payment page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="grid-row">
+		{% include "includes/utility-navigation-dashboard.html" %}
+</div>
+
+<div class="grid-row">
+ 
+	    <div class="column-two-thirds">
+		      <h1 class="heading-large underline">Dashboard</h1>	      	
+		</div>
+		<div class="column-one-third table-overview">
+			<a href="/staff-dashboard-table">View weekly overview</a>
+		</div>
+</div>		
+<!-- Filter -->	
+<div class="grid-row">
+		<div class="column-half filter-fields date-range">
+		<!-- <h2 class="heading-medium">In the last 7 days</h2> -->
+		 	<div class="form-group">
+				<!-- <legend class="form-label-bold date-label">In the last 7 days</legend> -->
+        		<div class="form-date">
+
+			     <div class="form-group">
+			        <p class="form-hint">Date from</p>
+	            		<input class="form-control" id="full-name" name="full-name" type="text">
+	            	<p class="form-hint-small">eg 25/11/2015</p>
+			     </div>
+	        	 
+			     <!-- <div class="datetime-seperator">
+			        <p>to</p>
+			     </div> -->
+			        <div class="form-group">
+			        <p class="form-hint">Date to</p>
+	            		<input class="form-control" id="full-name" name="full-name" type="text">
+	            	<p class="form-hint-small">eg 27/11/2015</p>
+			        </div>
+			        <div class="form-group filter-button">
+	 					<button class="button filter-button">Filter</button>
+				</div>
+        		</div>
+			</div>
+		 </div>
+
+			 
+		</div>
+	
+ <!-- Transaction overview -->
+		<div class="grid row ">
+			<div class="transaction-categories">
+				<h2 class="heading-medium medium-underline">From 10/11/2016 to 15/12/2016 
+				</h2>
+			<div class="category category--successful">
+				<p>Successful</p>
+				<div class="category__amount">
+					<!-- react-text: 89 -->425<!-- /react-text --><!-- react-text: 90 --> — <!-- /react-text --><div class="category__sum"><!-- react-text: 92 -->£<!-- /react-text --><!-- react-text: 93 -->36640<!-- /react-text --><!-- react-text: 94 -->.00<!-- /react-text -->
+					</div>
+				</div>
+			</div>
+
+			<div class="category category--failed">
+				<p>Failed</p>
+				<div class="category__amount">
+					<!-- react-text: 98 -->56<!-- /react-text --><!-- react-text: 99 --> — <!-- /react-text --><div class="category__sum"><!-- react-text: 101 -->£<!-- /react-text --><!-- react-text: 102 -->4720<!-- /react-text --><!-- react-text: 103 -->.00<!-- /react-text --></div>
+				</div>
+			</div>
+
+			<div class="category category--refunds">
+				<p>Refunds</p>
+				<div class="category__amount">
+					<!-- react-text: 107 -->16<!-- /react-text --><!-- react-text: 108 --> — <!-- /react-text --><div class="category__sum"><!-- react-text: 110 -->£<!-- /react-text --><!-- react-text: 111 -->1280<!-- /react-text --><!-- react-text: 112 -->.00<!-- /react-text --></div>
+				</div>
+			</div>
+
+			<img alt="" class="arrow" src="/public/images/category-arrow.png">
+			
+			<div class="category category--net-income">
+				<p>Net income</p>
+				<div class="category__amount">409
+					<div class="category__sum"><!-- react-text: 118 -->£<!-- /react-text --><!-- react-text: 119 -->35360<!-- /react-text --><!-- react-text: 120 -->.00<!-- /react-text --></div>
+				</div>
+			</div>
+		</div>	
+		
+
+<!-- Graphs-->		
+	<div class="graphs">
+		
+			<h3 class="heading-small">Transaction value (£)</h3>
+				<img alt="" src="/public/images/value.png" width="920">
+			<h3 class="heading-small">Transaction volume</h3>
+				<img alt="" src="/public/images/transactions.png" width="920">
+		
+	</div>
+	
+	</div>
+</div>
+</div>
+</main>
+
+
+{%endblock%}
