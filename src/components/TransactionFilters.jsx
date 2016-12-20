@@ -58,9 +58,6 @@ export default class TransactionFilters extends Component {
     } = this.props
 
     return <div>
-      <div className='overview'>
-        <h2 className='heading-small'>Filter transactions list</h2>
-      </div>
       <div className='filter-section'>
         <div className='column-quarter filter-fields'>
           <div className='form-group'>
