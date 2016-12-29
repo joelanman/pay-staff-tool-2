@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Transaction list
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+<div class="grid-row">
+		{% include "includes/utility-navigation-settings.html" %}
+</div>
+	
+<div class="grid-row">
+	<!-- Left nav -->	
+	<div class="column-one-third">
+		{% include "includes/left-navigation-team.html" %}		
+	</div>
+
+	<!-- Main body -->
+
+	<div class="column-two-thirds">
+	    <h1 class="heading-large underline">Change service name</h1>  
+		<div class="form-group">
+		<label class="form-label" for="service-name">
+		Enter new service name
+			<span class="form-hint">
+			    The service name can't be more than 50 characters.
+			</span>
+		</label>
+		<input class="form-control" id="service-name" type="text">
+
+		</div>	
+		<div>
+			<a href="service-name">
+			<input id="generate-button" type="submit" class="button" value="Save service name">
+			</a>		
+			<p class="add-top-margin">
+			    <a href="/service-name">Cancel</a>
+			</p>
+			
+        </div>  		
+  	</div>
+
+
+	<!-- Team members list -->
+		
+
+</div>
+</main>
+
+{% endblock %}

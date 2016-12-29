@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Transaction list
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+<div class="grid-row">
+		{% include "includes/utility-navigation-settings.html" %}
+</div>
+	
+<div class="grid-row">
+	<!-- Left nav -->	
+	<div class="column-one-third">
+		{% include "includes/left-navigation-team.html" %}		
+	</div>
+
+	<!-- Main body -->
+
+	<div class="column-two-thirds">
+	    <h1 class="heading-large underline">Change service name</h1>  
+		<h2 class="heading-medium">Current service name</h2>
+		<div class="">
+		    <p>As it appears on the user facing payment screens</h3>
+		    
+		    <p class="push-bottom panel panel-border-wide">GOV.UK Pay - Sandbox</p>
+
+
+			<a href="service-name-edit">
+			<input id="generate-button" type="submit" class="button" value="Change service name">
+			</a>
+			<p class="add-top-margin">
+			    <a href="/service-name">Cancel</a>
+			</p>
+			
+        </div>  		
+  	</div>
+
+
+	<!-- Team members list -->
+		
+
+</div>
+</main>
+
+{% endblock %}
