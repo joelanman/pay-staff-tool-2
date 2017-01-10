@@ -1,0 +1,35 @@
+
+<div class="grid-row padding-grid-row">
+  <h1 class="heading-large underline">API Keys</h1>
+</div>
+
+<div class="overview">      		
+		<div class="column-one-half team-active">
+  		<h2 class="heading-medium staff-subheading">
+			Generate a new API key
+			</h2>
+	</div>
+	
+	<form class="form">
+		<div class="form-group">
+			<label class="form-label" for="description"> Add a description for the key
+			    <span class="form-hint">For example, 'John Smith's API key'</span>
+			</label>
+			
+
+			<textarea id="description" name="description" type="text" maxlength="100" size="150" class="form-control"></textarea>
+
+			<p>When generated the key will only be shown once.</p>
+			
+		</div>
+	</form>
+
+	<div class="form-group">
+		<a href="generate-2">
+			<input id="generate-button" type="submit" class="button" value="Generate key">
+		</a>
+		<p class="add-top-margin">
+		    <a href="/tokens">Cancel</a>
+		</p>
+	</div>
+</div>  
