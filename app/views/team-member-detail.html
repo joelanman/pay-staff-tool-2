@@ -11,76 +11,17 @@
 		{% include "includes/utility-navigation-settings.html" %}
 </div>
 	
-	<div class="grid-row">
+<div class="grid-row">
 <!-- Left nav -->
 		<div class="column-one-third">
-
-
-
 		{% include "includes/left-navigation-team.html" %}		
 		</div>
 
-	    <div class="column-two-thirds">
-
 <!-- Main body -->
-	      <h1 class="heading-large underline">Team members</h1>
-	      	
-	      	<div class="back">
-				<a href="/team-members">&#9664; Back to all members</a>
-			</div>
-		
-		    <h2 class="heading-small">Details</h2>
-				
-		    <table class="member-table">
-		      	<tbody>
-		      		<tr>
-			      		<td></td> 
-			      		<td></td>
-			      		<td></td>
-			      	</tr>
-			      	<tr>
-			      		<td>Name:</td> 
-			      		<td>John Smith</td>
-			      		<td><a href="/edit-permissions">Change</a></td>
-			      	</tr>
-			      	<tr>
-			      		<td>Email:</td> 
-			      		<td>john.smith@email.gov.uk</td>
-			      		<td><a href="/edit-permissions">Change</a></td>
-			      	</tr>
-			      	<tr>
-			      		<td>Permission level:</td> 
-			      		<td>Administrator</td>
-			      		<td><a href="/edit-permissions">Edit permissions</a></td>
-			      	</tr>
-			      	<tr>
-						<td>Start date:</td>
-						<td>8 Sep 2016 – 11:14:22</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Last active:</td> 
-						<td>Now</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Organisation:</td> 
-						<td>Ministry of Government</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>Service:</td> 
-						<td>Money to Government</td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-			<br />
-			<p>
-  				<a href="/team-member-remove">Remove user</a>
-			</p>
-	
-	</div>
+
+		<div class="column-two-thirds">
+		{% include "includes/settings/team-member-detail.html" %}
+		</div>
 
 </div>
 </main>
