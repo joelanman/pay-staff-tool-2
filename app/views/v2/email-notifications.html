@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Transaction list
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+<div class="grid-row">
+		{% include "includes/utility-navigation-settings.html" %}
+</div>
+	
+<div class="grid-row">
+	<!-- Left nav -->	
+	<div class="column-one-third">
+		{% include "includes/left-navigation-email.html" %}		
+	</div>
+
+	<!-- Main body -->
+
+	<div class="column-two-thirds">
+	     {% include "includes/settings/email-notifications.html" %}		
+  	</div>
+
+
+	<!-- Team members list -->
+		
+
+</div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK payment page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="grid-row">
+		{% include "includes/utility-navigation.html" %}
+</div>
+
+	<div class="grid-row">
+	
+<!-- Left nav -->
+	<div class="column-quarter">
+
+	{% include "includes/left-navigation.html" %}		
+	</div>
+<!-- Main body -->
+
+    <div class="column-three-quarters">
+		{% include "includes/settings/generate-2.html" %}
+	</div>
+</div>
+</main>
+
+
+{%endblock%}
