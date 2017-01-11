@@ -1,0 +1,91 @@
+<h1 class="heading-large underline">Email notifications</h1>  
+<h2 class="heading-medium">Current email template</h2>
+<div class="">
+    <h3 class="heading-small">Subject</h3>
+    
+    <p class="push-bottom panel panel-border-wide">GOV.UK Pay - Sandbox: Successful Payment
+    
+    <span class="grey">
+        [Reference number]
+    </span>
+    
+    </p>
+  
+    <h3 class="heading-small  ">Message content</h3>
+
+<div class="panel panel-border-wide">
+    <p class="push-bottom">Thank you for your recent payment for GOV.UK Pay - Sandbox</p>
+    <p>
+    Your payment summary:<br>
+    Reference: <span class="grey">[Reference number]</span><br>
+    Date of payment: <span class="grey">[Date]</span><br>
+    Payment for: <span class="grey">[Payment description detail]</span><br>
+    Total amount: <span class="grey">[Amount]</span><br>
+    </p>
+    
+    <p class="grey">*Optional custom paragraph - add this below*</p>
+    
+    <p>From GOV.UK Pay - Sandbox </p>
+    <p>This is an automatically generated email, please do not reply.</p>
+</div>
+
+<p class="font-xsmall">
+  The optional custom paragraph should give users extra information related
+  to your service.
+</p>
+
+<h2 class="heading-medium">
+	Add a custom paragraph
+</h2>
+
+<h3 class="heading-small"> Guidance on providing extra information
+</h3>
+
+<ul class="list-bullet">
+    <li>
+        let the user know if they need to do something else to complete the service or application
+    </li>
+    <li>
+        include information regarding delivery dates or how long it will take to process the payment
+    </li>
+    <li>
+        link to a page on GOV.UK if you want to provide contact service details
+    </li>
+    <li>
+        links must point to a .gov.uk domain and show the url in full
+    </li>
+    <li>
+        dont use redirects or tracking links
+    </li>
+    <li>
+        dont link directly to a sign in page
+    </li>
+    <li>
+        use https where available
+    </li>
+    <li>
+        dont request personal data passwords or payment details
+    </li>
+</ul>
+
+<h2 class="heading-small">Enter extra information</h2>
+
+
+<form class="form">
+	<div class="form-group">
+		<label class="form-label" for="description">This will appear after the payment summary in the email
+		</label>
+		
+		<textarea id="description" name="description" type="text" maxlength="100" size="150" class="form-control"></textarea>
+
+		<a href="email-confirm">
+		<input id="generate-button" type="submit" class="button" value="Continue">
+		</a>
+		
+	<p class="add-top-margin">
+	    <a href="/email-notifications">Cancel</a>
+	</p>
+	</div>
+</form>
+
+</div>  		
