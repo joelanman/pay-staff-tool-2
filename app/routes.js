@@ -39,6 +39,19 @@ router.get('/examples/over-18', function (req, res) {
 
 });
 
+
+
+
 // add your routes here
 
 module.exports = router;
+
+// team permissions
+
+// router.get('/adminpage', function(req, res){
+//   var setting = req.query.perm;
+
+//   if(setting == 'view'){
+//     nunjucks.renderString()
+//   }
+// });
