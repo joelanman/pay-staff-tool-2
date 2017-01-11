@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK payment page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+<div class="grid-row">
+		{% include "includes/utility-navigation-dashboard.html" %}
+</div>
+
+<div class="grid-row">
+ {% include "includes/dashboard/header.html" %}	    
+</div>	
+
+<div>	
+	{% include "includes/dashboard/tabs-today.html" %}
+</div>		
+
+ <!-- Transaction overview -->
+
+ <div class="grid-row">
+	{% include "includes/dashboard/transaction-overview.html" %}
+</div>
+		
+
+<!-- Graphs-->		
+	<!-- <div class="graphs">
+		
+			<h3 class="heading-small">Transaction value (£)</h3>
+				<img alt="" src="/public/images/value.png" width="920">
+			<h3 class="heading-small">Transaction volume</h3>
+				<img alt="" src="/public/images/transactions.png" width="920">
+		
+	</div> -->
+	
+	
+</main>
+
+
+{%endblock%}
