@@ -705,6 +705,12 @@ table td {
 	border-color: #6F777B;
 }
 
+.table-colour-black {
+	background-color: #000;
+	color: white;
+	border-color: #000;
+}
+
 tr.table-colour:hover {
 	background-color: black;
 }
@@ -719,6 +725,10 @@ tr.table-colour-green:hover {
 
 tr.table-colour-grey:hover {
 	background-color: black;
+}
+
+tr.table-colour-black:hover {
+	background-color: #6F777B;
 }
 
 .form-label-bold {
