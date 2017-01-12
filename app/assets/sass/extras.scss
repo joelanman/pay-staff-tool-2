@@ -1131,16 +1131,8 @@ body {
 	float: right;
 }
 
-.radio-2 {
-	font-weight: 700;
-}
 
-.permission-main {
-	.block-label {
-		background-color: #fff;
-		border: none;
-	}
-}
+
 
 .permission-list {
 	color: $secondary-text-colour;
@@ -1154,6 +1146,9 @@ body {
 	font-weight: 700;
 }
 
+.block-label {
+	margin-top: 10px;
+}
 
 // Tabs on API Key pages
 
@@ -1235,7 +1230,6 @@ textarea {
 
 // Staff dashboard 2 date filter
 
-
 .date-range .form-group {
  margin: 0 14px 0 0;
  
@@ -1266,6 +1260,7 @@ textarea {
 }
 
 // Dropdown environments
+
 .live-tag {
 	margin-left: 10px;
 	background-color: #006435;

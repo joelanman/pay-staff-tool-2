@@ -22,14 +22,14 @@
 
 <h3 class="heading-small">Permission level</h3>
 
-<form class="permission-main">
+<form class="permission-main" method="post">
 	<div class="form-group">
 	    <fieldset>
 
       	<legend class="visuallyhidden">Permission level</legend>
 
-      	<label class="block-label" for="radio-1">
-        <input id="radio-1" type="radio" name="radio-group" value="Administrator">
+      	<label class="block-label selection-button-radio" for="radio-1">
+        <input id="radio-1" type="radio" name="permission-level" value="Administrator">
         <span class="permission-main-type">Administrator</span>
 	        <ul class="permission-list">
 	        	<li>View and change settings</li>
@@ -37,8 +37,8 @@
 	        	<li>View data, e.g. transactions</li>
 	        </ul>
       	</label>
-      	<label class="block-label" for="radio-2">
-	        <input id="radio-2" type="radio" name="radio-group" value="View and refund">
+      	<label class="block-label selection-button-radio" for="radio-2">
+	        <input id="radio-2" type="radio" name="permission-level" value="View and refund">
 	        <span class="permission-main-type">View and refund</span>
 	        <ul class="permission-list">
 		        	<li>Edit data, e.g. refund a payment</li>
@@ -46,8 +46,8 @@
 		        	<li>Cannot view or edit settings</li>
 		    </ul>
         </label>
-     	<label class="block-label" for="radio-3">
-	        <input id="radio-3" type="radio" name="radio-group" value="View only">
+     	<label class="block-label selection-button-radio" for="radio-3">
+	        <input id="radio-3" type="radio" name="permission-level" value="View only">
 	        <span class="permission-main-type">View only</span>
 	        <ul class="permission-list">
 		        	<li>View data, e.g. transactions</li>
@@ -61,7 +61,7 @@
 </form>
 
 <div class="form-group">
-     <a href="/team-member-detail-b">
+     <a href="team-member-detail-b">
     	<input class="button" type="submit" value="Submit">
   	</a>  
 	</div>
